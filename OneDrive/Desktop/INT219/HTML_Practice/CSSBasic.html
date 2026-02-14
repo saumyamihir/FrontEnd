@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            color: rgb(48, 6, 237);
+            font-size: xx-large;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: aqua;
+            text-align: center;
+
+        }
+        .c1{
+            color: teal
+        }
+        #para1{
+            color:blueviolet;
+        }
+
+        
+        a[href="https://ums.lpu.in/lpuums/StudentDashboard.aspx"]{
+            color:rgb(241, 7, 195);
+         }
+
+         a:hover{
+            color:rgb(7, 243, 231);
+         }
+
+         div ,p{
+            color:brown;
+         }
+
+         div p{
+            color :rgb(7, 243, 231);
+         }
+
+         div > p{
+            color:rgb(255, 0, 0);
+         }
+
+         div + h2{
+            color:rgb(0, 255, 0);
+         }
+
+         div ~ p{
+            color:rgb(242, 107, 11);
+         }
+
+         p::after{
+            content: ok;
+         }
+
+        p::before{
+            content: hello;
+        }
+    </style>
+    <link rel="stylesheet" href="CSS/mystyle.css">
+</head>
+<body>
+    <h1><B>CSS Practice </h1>
+
+        <h3 style ="color:blue; font-family:Arial, Helvetica, sans-serif;">
+            This is Front End Web Development Course.</h3>
+        <h2>This is CSS Basic Example.</h2>
+        <center>
+           <p class="c1">This is a paragraph 1</p>
+        <p id="para1">This is a paragraph 2</p>
+
+        <b></b>
+        <a href="https://ums.lpu.in/lpuums/StudentDashboard.aspx">
+            This is a link to LPU UMS Dashboard</a><br>
+
+            <div>
+                <p>This is para1 inside div ection</p>
+                <p>This is para2 inside div section</p>
+                <section>
+                    <p>This is para inside section tag</p>
+                </section>
+            </div>
+            
+            <h2>this is new heading</h2>
+            <p>This is para3 outside div section</p>
+            <p>This is para4 outside div section</p>
+            <p>This is para5 outside div section</p>
+            <p>This is para6 outside div section</p>
+        </center>
+
+
+</body>
+</html>
