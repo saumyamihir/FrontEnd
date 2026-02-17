@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let laptop = 
+        {
+            brand : "Lenovo",
+            Design : "Thin",
+            color : "silver",
+            price : 510000,
+            Memory : 16,
+            basicinfo:function(){
+            console.log(`I have a ${laptop.brand} laptop which is of ${laptop.color} 
+             color . It's RAM is ${laptop.Memory}`);
+            }
+        }
+
+        console.log(laptop);
+        console.log(laptop.brand); 
+        console.log(laptop.Design);
+        console.log(laptop.color);
+        console.log(laptop.price);
+        console.log(laptop.Memory);
+        console.log(laptop.brand , laptop.Design, laptop.price);
+
+        console.log("I have a " + laptop.brand + " laptop which is of  "+ laptop.color  +" \n color . It's Ram is  "+ laptop.Memory);
+
+        laptop.basicinfo();
+        
+
+
+    </script>
+</body>
+</html>
