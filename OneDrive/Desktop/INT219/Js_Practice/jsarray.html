@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arr1 = [1,2,3,4,5];
+        let arr2 = ["a", "b"];
+        let arr3 = [2,4,6,8,10];
+        console.log(arr1);
+        arr1.push(400,500); // Push Method
+        console.log(arr1);
+        arr1.pop(500);  // Pop Method 
+        console.log(arr1);
+        console.log(arr1.concat(arr2)); // Concat Method 
+
+        // Every = It checks all elements in  an array pass the test or not .
+
+        console.log(arr1.every(n=>n%2==0));
+        
+        console.log(arr3);
+        console.log(arr3.every(n=>n%2==0));
+        
+    </script>
+</body>
+</html>

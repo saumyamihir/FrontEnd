@@ -8,6 +8,7 @@
 <body>
     <script>
 
+        /*
         let laptop = 
         {
             brand : "Lenovo",
@@ -17,7 +18,12 @@
             Memory : 16,
             basicinfo:function(){
             console.log(`I have a ${laptop.brand} laptop which is of ${laptop.color} 
-             color . It's RAM is ${laptop.Memory}`);
+            color . It's RAM is ${laptop.Memory}`);
+
+             console.log(`I have a ${this.brand} laptop which is of ${this.color} 
+             color . It's RAM is ${this.Memory}`);
+
+             
             }
         }
 
@@ -33,6 +39,34 @@
 
         laptop.basicinfo();
         
+        
+
+
+        // Object constructor
+
+        let student = new Object(); // create an empty object
+        student.name = "Saumya";
+        student.rollno = 32;
+        console.log(student["name"], student["rollno"]);
+        console.log(student.name , student.rollno);
+
+        */
+
+        // function Constructor 
+
+        function pen(brand,color,price)
+        {
+            this.brand = brand;
+            this.color = color;
+            this.price = price;
+        }
+
+        let pen1 = new pen ("Cello", "blue", 10);
+        let pen2 = new pen ("Natraj", "black", 10);
+
+        console.log(pen1);
+        console.log(pen2);
+
 
 
     </script>
