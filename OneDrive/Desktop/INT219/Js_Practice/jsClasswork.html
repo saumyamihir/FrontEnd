@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Grade Calculator</title>
 </head>
@@ -8,33 +8,31 @@
 <h2>Grade Calculator</h2>
 
 <script>
-    // Taking input from user
+    // Marks
     let python = 95;
     let dsa = 60;
     let java = 80;
 
-    // Calculating sum
-    let sum = python + dsa + java;
+    // Total & Average
+    let total = python + dsa + java;
+    let average = total / 3;
 
-    // Calculating average
-    let average = sum / 3;
+    document.write("Total Marks: " + total + "<br>");
+    document.write("Average Marks: " + average.toFixed(2) + "<br>");
 
-    document.write("Total Marks: " + sum + "<br>");
-    document.write("Average Marks: " + average.toFixed(1)+ "<br>");
-
-    // Grade calculation
-    if (average > 90) {
+    // Grade logic
+    if (average >= 90) {
         document.write("Grade: O");
-    }
-    else if (average >= 80 && average <= 90) {
+    } 
+    else if (average >= 80) {
         document.write("Grade: A");
-    }
-    else if (average >= 60 && average < 80) {
+    } 
+    else if (average >= 60) {
         document.write("Grade: B");
-    }
-    else if (average >= 50 && average < 60) {
+    } 
+    else if (average >= 50) {
         document.write("Grade: C");
-    }
+    } 
     else {
         document.write("Result: Fail");
     }
