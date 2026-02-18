@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- // Mouse Events : -->
+
+    <!-- // 1.onclick :alert will apear when we click and release the  left buttton . -->
+
+    <!-- <img src ="/HTML_Practice\Imges\img.png" alt="Image" width="200" height ="200"
+    style="border: 2px solid black;" onclick ="generateAlert()"> -->
+
+    <!-- // 2.oncontextmenu : a user right-clicks on an element. -->
+
+    <!-- <img src ="/HTML_Practice\Imges\img.png" alt="Image" width="200" height ="200"
+    style="border: 2px solid black;" oncontextmenu ="generateAlert()"> -->
+
+
+     <!-- 3.ondblclick : A user double-clicks on an element. -->
+
+    <!-- <img src ="/HTML_Practice\Imges\img.png" alt="Image" width="200" height ="200"
+    style="border: 2px solid black;" ondblclick ="generateAlert()">
+ -->
+
+    <!-- 4.onmousedown : when we press left key sudden alert will appear . -->
+
+    <!-- <img src ="/HTML_Practice\Imges\img.png" alt="Image" width="200" height ="200"
+    style="border: 2px solid black;" onmousedown ="generateAlert()"> -->
+
+
+    <!-- 5.onmouseenter : Alert will appear when we take cursor to the object or element .-->
+<!-- 
+    <img src ="/HTML_Practice\Imges\img.png" alt="Image" width="200" height ="200"
+    style="border: 2px solid black;" onmouseenter ="generateAlert()">
+     -->
+
+    <!-- 6.onmouseleave :Alert will appear when we take our cursor back from the element or object . -->
+<!-- 
+    <img src ="/HTML_Practice\Imges\img.png" alt="Image" width="200" height ="200"
+    style="border: 2px solid black;" onmouseleave ="generateAlert()"> -->
+
+
+    <!-- 7. onmousemove : It show how many times we move the mouse and it shows the no's -->
+<!-- 
+    <img src ="/HTML_Practice\Imges\img.png" alt="Image" width="200" height ="200"
+    style="border: 2px solid black;" onmousemove ="countfunc()">
+    <p id = "p1">Text</p> -->
+
+    <!-- 8. onmouseup: when we go on object with left click press and then we release then the Alert will arise.  -->
+
+    <!-- <img src ="/HTML_Practice\Imges\img.png" alt="Image" width="200" height ="200"
+    style="border: 2px solid black;" onmouseup ="generateAlert()"> -->
+
+
+    
+    <!-- 9. onmouseover : It work for parent and child elememt both when we go on child or parent it will show the no of times.  -->
+
+    <!-- <div style="background-color: yellow; width: 300px; height : 300px;"onmouseover ="countfunc()">
+    
+    <img src ="/HTML_Practice\Imges\img.png" alt="Image" width="200" height ="200"
+    style="border: 2px solid black;" >
+
+    </div>
+    <p id = "p1">Text</p> -->
+
+
+   
+   
+    <!-- 10. onmouseout: Same as onmouseover but it will increase when we leave the parent and child. -->
+     
+    <!-- 
+    <div style="background-color: yellow; width: 300px; height : 300px;"onmouseout ="countfunc()">
+    <img src ="/HTML_Practice\Imges\img.png" alt="Image" width="200" height ="200"
+    style="border: 2px solid black;" >
+    </div>
+    <p id = "p1">Text</p> 
+    -->
+
+
+
+
+    <!-- KeyBoard Events : -->
+
+
+    <!-- 1.onkeydown: works for every key of your keyboard.  -->
+<!-- 
+    <form action = " ">
+        <input type="text" onkeydown="generateAlert()">
+    </form> -->
+
+
+    <!-- 2.onkeypress : it will not work for special keys  -->
+
+    <!-- <form action = " ">
+        <input type="text" onkeypress="generateAlert()">
+    </form> -->
+
+    <!-- 3.onkeyup: It will work when we relesase the key  -->
+
+    <!-- <form action = " ">
+        <input type="text" onkeyup="generateAlert()">
+    </form> -->
+
+
+    <!-- 4.onblur:Works when we get out from the box after entering from the box get colored aur focused. -->
+
+    <!-- <form action = " ">
+        <input type="text" id ="text1" onblur="getStyle()">
+    </form> -->
+
+    
+    <!-- 5.onchange: Works when we enter the box and change something in that then it will focused and colored . -->
+
+    <!-- <form action = " ">
+        <input type="text" id ="text1" onchange="getStyle()">
+    </form> -->
+    
+    <!-- 6.onfocus: Works when we enter the box the box get colored aur focused. -->
+
+    <!-- <form action = " ">
+        <input type="text" id ="text1" onfocus="getStyle()">
+    </form> -->
+
+
+    <!-- 7.onselect : Works when write something and then we select the text then it will focused abd colored. -->
+
+    <form action = " ">
+        <input type="text" id ="text1" onselect="getStyle()">
+    </form>
+
+
+    <script>
+
+        function generateAlert(){
+            alert("You clicked the image!");
+        }
+
+        let c =0;
+        function countfunc(){
+            c+=1;
+            document.getElementById("p1").innerHTML = c;
+        }
+
+        function getStyle(){
+            document.getElementById("text1").style.backgroundColor ="yellow";
+        }
+
+
+
+    </script>
+</body>
+</html>
