@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mystyle{
+            background-color: yellow;
+            color:blue;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border:2px solid red;
+            padding: 3px;
+            margin:3px;
+        }
+    </style>
+</head>
+<body>
+    <p id ="p1">This is new Paragraph</p>
+
+    <button onclick="changStyle()">Chnage Style</button>
+
+
+    <p id ="p2">This is Styling</p>
+
+    <button onclick="addStyle()">Add Style</button>
+
+    <button onclick="removeStyle()">Remove Style</button>
+
+    <button onclick="togggleStyle()">toggle Style</button>
+
+
+      <p id ="p3">Text</p>
+
+      <button id="btn3">Add Event Listner </button>
+
+      <button onclick="removeEvent()">Remove Event Listner from btn3</button> 
+
+    <script>
+
+        function addEvent(){
+            document.getElementById("p3").innerHTML=Math.random();
+        }
+        document.getElementById("btn3").addEventListener("click",addEvent);
+
+
+        function removeEvent(){
+            document.getElementById("btn3").removeEventListener("click",addEvent);
+        }
+
+
+        function togggleStyle(){
+            document.getElementById("p2").classList.toggle("mystyle");
+        }
+
+        function removeStyle(){
+            document.getElementById("p2").classList.remove("mystyle");
+        }
+
+        function addStyle(){
+            document.getElementById("p2").classList.add("mystyle");
+        }
+
+        function changStyle(){
+            let elt = document.getElementById("p1");
+            elt.style.backgroundColor="red";
+            elt.style.color="green";
+            elt.style.frontStyle="italic";
+            elt.style.textAlign="center";
+        }
+    </script>
+</body>
+</html>
