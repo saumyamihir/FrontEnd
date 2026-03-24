@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    
+
+        // Normal Function 
+
+        function basicfunc()
+        {
+            console.log("Welcome ");
+        }
+
+        basicfunc();
+
+        function average(a,b,c)
+        {
+            var d ;
+            d = (a+b+c)/3;
+            console.log(d);
+            return d;
+        }
+        
+        console.log(average(2,3,4));
+
+        // Arrow Function 
+
+        const basicfunc1 = ()=> {console.log("welcome")};
+        console.log(basicfunc1());
+
+        const average1 = (a,b,c)=>(a+b+c)/3; // Implicit Return
+        console.log(average1(2,3,4)); 
+
+        const average2 = (a,b,c)=>{return(a+b+c)/3}; //Explict Return
+        console.log(average2(10,20,30));
+
+        const squr = (n)=>{return n*n}; // Implicit Return
+        console.log(squr(2));
+        
+        const squr1 = n => n*n; //Explict Return
+        console.log(squr1(4));
+
+
+    </script>
+</body>
+</html>

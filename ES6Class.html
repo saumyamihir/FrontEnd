@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Class</title>
+</head>
+<body>
+    <h1>Person Class Demo</h1>
+    <p id="output"></p>
+
+    <script>
+        // Create a Person class with constructor and method
+        class Person {
+         
+            constructor(name, age, city)
+             {
+                this.name = name;
+                this.age = age;
+                this.city = city;
+            }
+            displayInfo() {
+               return `My name is ${this.name} and age is ${this.age} ,belong from ${this.city}.`
+            }
+        }
+        const person1 = new Person("Sami", 21, "Bihar");
+        person1.displayInfo();
+
+        class student extends Person
+        {
+            constructor(name,age,grade,rollno)
+            {
+                super(name,age)
+                this.grade = grade;
+                this.rollno = rollno;
+            }
+             newinfo(){
+            return `${this.displayInfo}. My age is ${this.grade} and rollno is ${this.rollno}`
+        }
+        }
+       
+        let stu1 = new student("Sami",21 ,"A",32);
+        console.log(stu1.newinfo());
+    </script>
+</body>
+</html>

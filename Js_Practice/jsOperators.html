@@ -1,0 +1,45 @@
+<html lang="en">
+<body>
+    <script>
+
+        // Logical Operators in JavaScript
+
+let a = 10;
+let b = 20;
+let c = 5;
+
+// Logical AND (&&)
+// Condition is true only if BOTH conditions are true
+if (a < b && b > c) {
+    console.log("AND Condition is TRUE");
+} else {
+    console.log("AND Condition is FALSE");
+}
+
+// Logical OR (||)
+// Condition is true if AT LEAST ONE condition is true
+if (a > b || b > c) {
+    console.log("OR Condition is TRUE");
+} else {
+    console.log("OR Condition is FALSE");
+}
+
+// Logical NOT (!)
+// Reverses the result
+let isStudent = true;
+
+if (!isStudent) {
+    console.log("NOT Condition is TRUE");
+} else {
+    console.log("NOT Condition is FALSE");
+}
+
+document.write("<h1>" + "Ternary Operator" + "</h1>");
+let marks = 60;
+let result = (marks>40)?"Pass":"Fail";
+document.write(result);
+
+ </script>
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        let student = {
+            name : "sami",
+            rollno : 32
+        }
+
+        let student1 = Object.create(student);
+
+        console.log(student);
+        console.log(student1.rollno);
+        
+         let obj1 = {
+            a1 : "I am Object1"
+         }
+         let obj2 = {
+            a2 : " I am Object2",
+            __proto__:obj1
+         }
+         let obj3 = {
+            a3 : "I am Object3",
+             __proto__:obj2
+         }
+         console.log(obj1.__proto__);
+         console.log(obj2.__proto__);
+         console.log(obj3.__proto__);
+         console.log(obj3.a1);
+
+
+
+         let section = "324UW";
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <script>
+
+        function outer(){
+            let name = "Sami";
+            function inner(){
+                console.log(name);
+            }
+            // inner();
+
+        }
+        // outer();
+    </script> -->
+
+
+
+    <!-- <script>
+
+        function count(){
+            let c =0;
+            function innercount(){
+                c++;
+                console.log(c);
+            }
+            c = 6;
+            return innercount;
+        }
+        let d = count();
+        d();
+        d();
+        d();
+    </script> -->
+
+
+
+    <button id ="red">Red</button>
+    <button id ="green">Green</button>
+    <button id ="blue">Blue</button>
+    <script>
+        
+        function changeColor(color){
+            function innercolor(){
+                document.body.style.backgroundColor=`${color}`;
+            }
+           return innercolor; 
+        }
+        
+    
+        document.getElementById("red").onclick = changeColor("red");
+        document.getElementById("green").onclick = changeColor("green");
+        document.getElementById("blue").onclick = changeColor("blue");
+
+        //    document.getElementById("red").onclick=function(){
+        //   document.body.style.backgroundColor="red";
+       // }
+        // document.getElementById("green").onclick=function(){
+        //    document.body.style.backgroundColor="green";
+        // } 
+    </script>
+
+</body>
+</html>

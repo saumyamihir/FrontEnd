@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Grade Calculator</title>
+</head>
+<body>
+
+<h2>Grade Calculator</h2>
+
+<script>
+    // Marks
+    let python = 95;
+    let dsa = 60;
+    let java = 80;
+
+    // Total & Average
+    let total = python + dsa + java;
+    let average = total / 3;
+
+    document.write("Total Marks: " + total + "<br>");
+    document.write("Average Marks: " + average.toFixed(2) + "<br>");
+
+    // Grade logic
+    if (average >= 90) {
+        document.write("Grade: O");
+    } 
+    else if (average >= 80) {
+        document.write("Grade: A");
+    } 
+    else if (average >= 60) {
+        document.write("Grade: B");
+    } 
+    else if (average >= 50) {
+        document.write("Grade: C");
+    } 
+    else {
+        document.write("Result: Fail");
+    }
+</script>
+
+</body>
+</html>
