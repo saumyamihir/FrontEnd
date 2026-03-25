@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+    <h1 id ="head1">Heading 1 </h1>
+    <h1 id ="head2">Heading 2 </h1>
+    <h1 id ="head3">Heading 3 </h1>
+    <button id="bttn1">Change Color</button>
+
+    <script>
+        let heading1 = document.getElementById("head1");
+        let heading2 = document.getElementById("head2");
+        let heading3 = document.getElementById("head3");
+
+        let button1 = document.getElementById("bttn1");
+        button1.addEventListener("click",async ()=>{
+            await changeColor(heading1,"pink",2000);
+            await changeColor(heading2,"green",1000);
+            await changeColor(heading3,"brown",3000);
+         })
+        function changeColor(element,color1,time){
+            return new Promise((resolve,reject)=>{
+                if(element){
+                    setTimeout(()=>{
+                        element.style.color = color1;
+                        resolve();
+                    }, time);     
+                }
+                else{
+                    reject(new Error("The Element does not exist "));
+                }
+            })
+        }
+    </script> 
+</body>
+</html>
