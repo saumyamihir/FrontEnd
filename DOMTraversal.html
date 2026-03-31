@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal </title>
+</head>
+<body>
+    <!-- <div id ="box1">
+        <h1 id ="head1"> This is heading 1 inside div section.</h1>
+        <h2 id ="head2"> This is heading 2 inside div section.</h2>
+        <p id ="para1"> This is para1 inside div section .</p>
+        <p id ="para2"> This is para2 inside div section .</p>
+        <ul id ="list1">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div> 
+     <script>
+        let p1= document.getElementById("para1");
+        let b1 = document.getElementById("box1");
+        console.log(p1.parentElement);
+        console.log(b1.children);
+        console.log(b1.firstElementChild);
+        console.log(b1.lastElementChild);
+        console.log(p1.previousElementSibling);
+        console.log(p1.nextElementSibling);
+        console.log(b1.childNodes);
+        console.log(b1.firstChild);
+        console.log(b1.lastChild);  
+    </script> -->
+
+
+    <!-- click on para1 then para2 color should be changed 
+    <script>
+        let p1= document.getElementById("para1");
+        let p2= document.getElementById("para2");
+        p1.addEventListener("click", function(){
+            p2.style.color = "red";
+        })
+    </script> -->
+
+
+    <div id = "box2">
+        HTML Class
+        <h2 style ="display: none ;"> JS class</h2>
+    </div>
+    <script>
+        let b2 = document.getElementById("box2");
+        console.log(b2.innerHTML);
+        console.log(b2.innerText);
+        console.log(b2.textContent);
+    </script>
+
+
+</body>
+</html>

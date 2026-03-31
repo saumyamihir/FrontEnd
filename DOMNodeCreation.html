@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Node Creation </title>
+    <!-- <style>
+        div{
+            background-color: aqua;
+            width: 300px;
+            height: 300px;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- <script>
+        let para1 = document.createElement("p");
+        para1.textContent = "This is a paragraph";
+        document.body.appendChild(para1);
+        
+        let text1 = document.createTextNode("Front End class");
+        document.body.appendChild(text1);
+        
+        let div1 = document.createElement("div");
+        document.body.appendChild(div1);
+        div1.appendChild(para1);
+        div1.removeChild(para1);
+        document.body.removeChild(div1);
+    </script> -->
+
+
+    <!-- Create a Interative Todo list  -->
+    <!-- When u click an add task task shoyld be adeed to the list -->
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button id="addTaskBtn">Add Task</button>
+    <ul id="taskList"></ul>
+    <script>
+        let taskInput = document.getElementById('taskInput');
+        let addTaskBtn = document.getElementById('addTaskBtn');
+        let taskList = document.getElementById('taskList');
+
+        addTaskBtn.addEventListener('click', () => {
+            let taskText = taskInput.value.trim();
+            if (taskText !== '') {
+                let listItem = document.createElement('li');
+                listItem.textContent = taskText;
+                taskList.appendChild(listItem);
+                taskInput.value = '';
+            }
+        });
+    </script>
+
+
+</body>
+</html>
