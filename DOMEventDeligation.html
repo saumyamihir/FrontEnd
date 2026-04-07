@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Deligation</title>
+    <style>
+        #gp{
+            background-color: aqua;
+            padding: 40px;
+        }
+        #parent{
+            background-color: yellowgreen;
+            padding: 30px;
+        }
+        #child{
+            background-color: yellow;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+     <div id = "gp">
+        <div id = "parent">
+            <div id ="child">
+                Event Delegation
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        document.getElementById("gp").addEventListener("click",(e)=>{
+            console.log("Grand Parent Div clicked");
+            console.log(e);
+            console.log(e.target.id);
+            console.log(e.currentTarget);
+            if(e.target.id === "child"){
+                console.log("child Div clicked");
+            }
+            else if(e.target.id === "parent"){
+                console.log("Parent Div Clicked");
+            }
+            else{
+                console.log("Grant Parent Div Clicked");
+            }
+        })
+        //document.getElementById("parent").addEventListener("click",()=>{
+         //   console.log("Parent Div clicked");
+        //})
+        //document.getElementById("child").addEventListener("click",()=>{
+         //   console.log("Child Div clicked");
+        //})
+    </script> -->
+
+
+    <!-- <ul id ="list1">
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+        <li>Item5</li>
+    </ul>
+
+    <script>
+        document.getElementById("list1").addEventListener("click",(e)=>{
+            console.log(e.target.textContent)
+        })
+    </script> -->
+
+
+    <!-- Create an interactive To-Do list -->
+    <!-- When u click on any list item
+      the background color and the color of text
+      should be changed. -->
+    <!-- When you double click on any item
+     that item should be removedfrom the list -->
+    <!--Also Identify the parent element and next element 
+    sibling of that item which is clicked -->
+    <!-- After the list , display the total count of the items Dynamically -->
+      
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button id="addTaskBtn">Add Task</button>
+    <ul id="taskList"></ul>
+    <script>
+        let taskInput = document.getElementById('taskInput');
+        let addTaskBtn = document.getElementById('addTaskBtn');
+        let taskList = document.getElementById('taskList');
+
+        addTaskBtn.addEventListener('click', () => {
+            let taskText = taskInput.value.trim();
+            if (taskText !== '') {
+                let listItem = document.createElement('li');
+                listItem.textContent = taskText;
+                taskList.appendChild(listItem);
+                taskInput.value = '';
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>

@@ -48,9 +48,15 @@
     </div>
     <script>
         let b2 = document.getElementById("box2");
-        console.log(b2.innerHTML);
-        console.log(b2.innerText);
-        console.log(b2.textContent);
+        //console.log(b2.innerHTML);
+        //console.log(b2.innerText);
+        //console.log(b2.textContent);
+        b2.setAttribute("class","c1");
+        console.log(b2.getAttribute("c1"));
+        console.log(b2.getAttribute("id"));
+        b2.removeAttribute("class");
+        console.log(b2.getAttribute("class"));
+        
     </script>
 
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Propagation </title>
+    <style>
+        #gp{
+            background-color: violet;
+            width : 400px;
+            height: 400px;
+            padding: 20px;
+        }
+        #parent{
+            background-color: tomato;
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id = "gp">
+        <div id = "parent">
+            <button id ="child">Click!!!</button>
+        </div>
+    </div>
+
+    <!-- Event Bubbling -->
+    <!-- <script>
+        document.getElementById("gp").addEventListener("click",()=>{
+            alert("Grand Parent Div clicked")
+        })
+        document.getElementById("parent").addEventListener("click",(event)=>{
+            event.stopPropagation()
+            alert("Parent Div clicked")
+        })
+        document.getElementById("child").addEventListener("click",(event)=>{
+            event.stopPropagation()
+            alert("Button clicked")
+        })
+    </script> -->
+    
+    <!-- Event Capturing -->
+    <script>
+        document.getElementById("gp").addEventListener("click",()=>{
+            alert("Grand Parent Div clicked")
+        },true)
+        document.getElementById("parent").addEventListener("click",(event)=>{
+            alert("Parent Div clicked")
+        },true)
+        document.getElementById("child").addEventListener("click",(event)=>{
+            alert("Button clicked")
+        },true)
+    </script>
+</body>
+</html>
