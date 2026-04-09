@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DOM Manipulation & Events Demo</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f3f4f6;
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .container {
+        width: 400px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .box {
+        margin: 15px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .purple {
+        background: purple;
+    }
+
+    .green {
+        background: green;
+    }
+
+    .red {
+        background: red;
+    }
+
+    .task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #eef2ff;
+        padding: 8px;
+        margin-top: 8px;
+        border-radius: 5px;
+    }
+
+    .dark {
+        background: #1f2937;
+        color: white;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h2>DOM Manipulation & Events Demo</h2>
+
+    <div class="box">
+        <label>1. Type Your Name</label>
+        <input type="text" id="nameInput" placeholder="Enter name">
+        <p id="greet"></p>
+        <p id="count"></p>
+    </div>
+
+    <div class="box">
+        <label>2. Choose a Theme Accent</label>
+        <select id="theme">
+            <option>Purple</option>
+            <option>Green</option>
+            <option>Red</option>
+        </select>
+
+        <button class="purple" onclick="toggleDark()">Toggle Dark Mode</button>
+        <button class="purple" onclick="surprise()">Surprise Message</button>
+
+        <p id="msg">Events make web pages interactive and powerful</p>
+    </div>
+
+    <div class="box">
+        <label>3. Add a Task</label>
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button class="purple" onclick="addTask()">Add Task</button>
+
+        <div id="taskList"></div>
+
+        <p id="summary">Total: 0 | Completed: 0 | Remaining: 0</p>
+    </div>
+
+</div>
+
+<script>
+    let nameInput = document.getElementById("nameInput");
+    nameInput.addEventListener("input", function() {
+        let name = nameInput.value;
+        document.getElementById("greet").innerText = "Hello, " + name + " 👋";
+        document.getElementById("count").innerText = "Character Count: " + name.length;
+    });
+
+    document.getElementById("theme").addEventListener("change", function() {
+        let color = this.value.toLowerCase();
+        document.querySelectorAll("button").forEach(btn => {
+            btn.style.background = color;
+        });
+    });
+
+    function toggleDark() {
+        document.body.classList.toggle("dark");
+    }
+
+    function surprise() {
+        alert("🎉 Keep Learning JavaScript!");
+    }
+
+    let total = 0, completed = 0;
+
+    function addTask() {
+        let input = document.getElementById("taskInput");
+        let taskText = input.value;
+
+        if (taskText === "") return;
+
+        let div = document.createElement("div");
+        div.className = "task";
+
+        let span = document.createElement("span");
+        span.innerText = taskText;
+
+        let completeBtn = document.createElement("button");
+        completeBtn.innerText = "Complete";
+        completeBtn.className = "green";
+
+        let deleteBtn = document.createElement("button");
+        deleteBtn.innerText = "Delete";
+        deleteBtn.className = "red";
+
+        completeBtn.onclick = function() {
+            span.style.textDecoration = "line-through";
+            completed++;
+            updateSummary();
+        };
+
+        deleteBtn.onclick = function() {
+            div.remove();
+            total--;
+            updateSummary();
+        };
+
+        div.appendChild(span);
+        div.appendChild(completeBtn);
+        div.appendChild(deleteBtn);
+
+        document.getElementById("taskList").appendChild(div);
+
+        total++;
+        updateSummary();
+
+        input.value = "";
+    }
+
+    function updateSummary() {
+        document.getElementById("summary").innerText =
+            `Total: ${total} | Completed: ${completed} | Remaining: ${total - completed}`;
+    }
+</script>
+
+</body>
+</html>
