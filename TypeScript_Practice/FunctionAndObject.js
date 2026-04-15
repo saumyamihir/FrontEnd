@@ -42,4 +42,26 @@ let Student = {
     pin: 845401
 };
 console.log(Student);
+let personAge = 20;
+console.log(personAge);
+const personName = "Vinay";
+console.log(personName);
+let newstatus = "sucess";
+console.log(newstatus);
+// ----------------------------------------QUESTION ----------------------------------------------------------
+function updateStatus(status) {
+    if (typeof status == "string") {
+        console.log("Status is a string: ", status.toUpperCase());
+    }
+    else if (typeof status == "number") {
+        console.log("Status is a number :", status * 4);
+    }
+    else {
+        console.log("error! OOps Something Wrong.");
+    }
+}
+let status1 = "Sami";
+let status2 = 8;
+updateStatus(status1);
+updateStatus(status2);
 export {};

@@ -85,4 +85,34 @@ let Student : StudentCombine={
 }
 console.log(Student);
 
+type age = number;
+let personAge: age = 20;
+console.log(personAge);
 
+type fname = string;
+const personName : fname = "Vinay";
+console.log(personName);
+
+type status = "sucess"|"failure";
+let newstatus : status = "sucess";
+console.log(newstatus);
+
+
+// ----------------------------------------QUESTION ----------------------------------------------------------
+
+function updateStatus(status:string|number):void{
+    if(typeof status == "string" ){
+        console.log("Status is a string: ",status.toUpperCase());
+    }
+    else if(typeof status == "number"){
+        console.log("Status is a number :",status*4);
+    }
+    else{
+        console.log("error! OOps Something Wrong.")
+    }
+}
+let status1 : string | number = "Sami";
+let status2 : string | number = 8;
+
+updateStatus(status1);
+updateStatus(status2);
