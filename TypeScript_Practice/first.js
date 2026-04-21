@@ -1,3 +1,4 @@
+export {};
 let age = 50;
 console.log(age);
 let p = "324UW";
@@ -21,4 +22,4 @@ let i;
 for (i = 0; i < arraystr.length; i++) {
     console.log(i + " " + arraystr[i]);
 }
-export {};
+//# sourceMappingURL=first.js.map

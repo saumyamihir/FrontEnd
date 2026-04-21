@@ -1,3 +1,4 @@
+export {};
 function info() {
     console.log("hello");
 }
@@ -64,4 +65,4 @@ let status1 = "Sami";
 let status2 = 8;
 updateStatus(status1);
 updateStatus(status2);
-export {};
+//# sourceMappingURL=FunctionAndObject.js.map

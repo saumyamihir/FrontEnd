@@ -1,3 +1,4 @@
+export {};
 let laptopObject = {
     id: 1,
     brand: "Lenovo",
@@ -32,4 +33,4 @@ let StuObject = {
     state: "Bihar"
 };
 console.log(StuObject);
-export {};
+//# sourceMappingURL=InterfaceFile.js.map
