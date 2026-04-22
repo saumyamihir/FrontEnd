@@ -48,6 +48,7 @@ function checkNull(val:string|null){
 }
 checkNull("");
 
+
 // In operator Narrowing
 type Reading1={
     read():string;
