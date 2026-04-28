@@ -1,5 +1,5 @@
+export {};
 
-export{};
 type User = {
     name: string;
     age: number;
@@ -31,14 +31,14 @@ function placeOrder(user: User, items: Item[]): Order {
 }
 
 const user: User = {
-    name: "Rahul",
-    age: 22
+    name: "Saumya",
+    age: 20
 };
 
 const items: Item[] = [
     {
         name: "Pizza",
-        price: 200
+        price: 500
     },
     {
         name: "Burger",
@@ -49,3 +49,6 @@ const items: Item[] = [
 const order: Order = placeOrder(user, items);
 
 console.log(order.totalAmount.toFixed(2));
+
+document.getElementById("result")!.innerText =
+    order.totalAmount.toFixed(2);

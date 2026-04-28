@@ -11,13 +11,13 @@ function placeOrder(user, items) {
     };
 }
 const user = {
-    name: "Rahul",
-    age: 22
+    name: "Saumya",
+    age: 20
 };
 const items = [
     {
         name: "Pizza",
-        price: 200
+        price: 500
     },
     {
         name: "Burger",
@@ -26,4 +26,6 @@ const items = [
 ];
 const order = placeOrder(user, items);
 console.log(order.totalAmount.toFixed(2));
+document.getElementById("result").innerText =
+    order.totalAmount.toFixed(2);
 //# sourceMappingURL=gamification-4.js.map
